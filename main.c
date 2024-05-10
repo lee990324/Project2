@@ -29,23 +29,23 @@ int main(){
 
 //파일 1의 정보를 가져오는 함수 작성
 void filestat1(){
-    stat("test1", &stat1);
+    stat("text1", &stat1);
 }
 
 //파일 2의 정보를 가져오는 함수 작성
 void filestat2(){
-    stat("test2", &stat2);
+    stat("text2", &stat2);
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1(){
-    stat("test1", &stat1);
+    stat("text1", &stat1);
     time1 = localtime(&stat1.st_mtime);    
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
 void filetime2(){
-    stat("test2", &stat2);
+    stat("text2", &stat2);
     time2 = localtime(&stat2.st_mtime);    
 }
 
