@@ -48,17 +48,21 @@ void filetime2(){
 }
 
 void sizecmp(){
-    if (stat1.st_size == stat2.st_size)
-        printf("파일 크기가 같습니다.\n");
+    if (stat1.st_size > stat2.st_size)
+        printf("file1.txt가 더 큽니다.\n");
+    else if (stat1.st_size < stat2.st_size)
+        printf("file2.txt가 더 큽니다.\n");
     else
-        printf("파일 크기가 다릅니다.\n");
+        printf("두 파일의 크기가 같습니다.\n");
 }
 
 void blockcmp(){
-    if (stat1.st_blocks == stat2.st_blocks)
-        printf("파일 블록 수가 같습니다.\n");
+    if (stat1.st_blocks > stat2.st_blocks)
+        printf("file1.txt가 더 많은 블록을 사용합니다.\n");
+    else if (stat1.st_blocks < stat2.st_blocks)
+        printf("file2.txt가 더 많은 블록을 사용합니다.\n");
     else
-        printf("파일 블록 수가 다릅니다.\n");
+        printf("두 파일의 블록 수가 같습니다.\n");
 }
 
 void datecmp(){
